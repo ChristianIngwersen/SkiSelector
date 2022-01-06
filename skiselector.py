@@ -28,12 +28,13 @@ class SkiSelector(object):
         self.couples = [
             ("Christian", "Charlotte"),
             ("Thomas", "Kristina"),
-            ("Frederik", "Matilde")
+            ("Frederik", "Matilde"),
+	    ("Mark", "Gustav")
         ]
 
     def check_constraints(self):
         for couple in self.couples:
-            condition = (couple[0] in self.random_perm[:5]) == (couple[1] in self.random_perm[:5])
+            condition = (couple[0] in self.random_perm[:4]) == (couple[1] in self.random_perm[:4])
             if not condition:
                 return condition
         return True
