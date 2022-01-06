@@ -21,17 +21,13 @@ class SkiSelector(object):
             "Thomas",
             "Harald",
             "Gustav",
-            "Andreas",
             "Michala",
-            "Kasper",
-            "Sofie",
             "Matilde",
             "Frederik"
         ]
         self.couples = [
             ("Christian", "Charlotte"),
             ("Thomas", "Kristina"),
-            ("Kasper", "Sofie"),
             ("Frederik", "Matilde")
         ]
 
@@ -71,8 +67,8 @@ class SkiSelector(object):
                 self.random_perm = np.random.permutation(self.persons[:-2])
                 constraints_fulfilled = self.check_constraints()
 
-        rooms[1] = self.random_perm[:5]
-        rooms[2] = self.random_perm[5:]
+        rooms[1] = self.random_perm[:4]
+        rooms[2] = self.random_perm[4:]
 
         # Bare for at gøre det kokmpliceret laver vi en ny lodtrækning her på "voting power" i det givne værelse
         # i.e hvilken rækkefølge må man vælge seng i. Hvis det er med pair couples, så stemmer de som 1 person
